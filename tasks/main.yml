@@ -1,0 +1,9 @@
+---
+# tasks file for ANSSI-RECOM
+- name: Apply minimal security recommendations
+  include_tasks: minimal.yml
+  when: security_level == 'minimal'
+
+- name: Apply intermediary security recommendations
+  include_tasks: intermediary.yml
+  when: security_level == 'intermediary'
